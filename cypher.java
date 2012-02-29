@@ -1,7 +1,7 @@
 class cypher {
     public static void main(String[] args) {
             if(args.length!=4){
-            System.err.println("Incorrect usage. -[e,d] x y message");
+            System.err.println("Incorrect usage. -[e,d] even odd message");
             System.err.println("If your message has spaces, you need to use quotes.");
             System.exit(0);
         }
@@ -15,7 +15,7 @@ class cypher {
             b = -Integer.parseInt(args[2]);
         }
         else {
-            System.err.println("Incorrect usage. -[e,d] x y message");
+            System.err.println("Incorrect usage. -[e,d] even odd message");
             System.exit(0);
         }
         String t = args[3];
@@ -26,10 +26,10 @@ class cypher {
         for(int l=0;l<t.length();l++){
             if(ct[l]!=' '){
                 if(even){
-                    ct[l] = (char)((int)a + (int)ct[l]);
+                    ct[l] = (char)(a + (int)ct[l]);
                 }
                 else {
-                    ct[l] = (char)((int)b + (int)ct[l]);
+                    ct[l] = (char)(b + (int)ct[l]);
                 }
                 
                 if((int)ct[l]>(int)'z')
