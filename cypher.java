@@ -22,7 +22,6 @@ class cypher {
         char[] ct = t.toCharArray();
         boolean even = true;
         int diff =0;
-        cypher f = new cypher();
         System.out.println(ct);
         for(int l=0;l<t.length();l++){
             if(ct[l]!=' '){
